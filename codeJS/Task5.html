@@ -1,0 +1,30 @@
+<html>
+    <header>
+
+    </header>
+
+    <body>
+        <textarea cols="50" rows="20" id="textarea"></textarea><br>
+        <P>NoiDung</P>
+        <input type="text" id="characters"/>
+        <P>SoKyTu</P>
+
+        <script>
+            var textarea = document.getElementById('textarea');
+            textarea.addEventListener('keyup', function (e) {
+                if (e.keyCode === 13)
+                {
+                    var chars = this.value.length;
+                    if (chars > 200)
+                    {
+                        document.getElementById('characters').value = "You have typed more than the allowed characters!";
+                    }
+                    else 
+                    {
+                        document.getElementById('characters').value = chars;
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
